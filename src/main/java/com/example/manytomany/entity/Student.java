@@ -1,18 +1,14 @@
 package com.example.manytomany.entity;
-
-import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 @Entity
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
 public class Student implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -95,6 +91,5 @@ public class Student implements UserDetails {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
-
 
 }

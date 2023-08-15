@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 
 import java.util.List;
 @Entity
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

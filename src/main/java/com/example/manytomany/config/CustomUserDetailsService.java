@@ -1,5 +1,4 @@
 package com.example.manytomany.config;
-
 import com.example.manytomany.entity.Student;
 import com.example.manytomany.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;

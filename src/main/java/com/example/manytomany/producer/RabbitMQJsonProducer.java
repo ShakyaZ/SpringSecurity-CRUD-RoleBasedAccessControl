@@ -1,5 +1,4 @@
-package com.example.manytomany.config;
-
+package com.example.manytomany.producer;
 import com.example.manytomany.entity.Student;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +13,7 @@ public class RabbitMQJsonProducer {
     private String exchange;
     @Value("${rabbitmq.routing.json.key}")
     private String routingJsonKey;
+    //log obj to console
     private static final Logger LOGGER = LoggerFactory.getLogger(RabbitMQJsonProducer.class);
     private RabbitTemplate rabbitTemplate;
 
@@ -22,6 +22,7 @@ public class RabbitMQJsonProducer {
     }
     public void sendJsonMessage(Student student) {
         LOGGER.info(String.format("Json format details of student sent -> %s", student.toString()));
+        //send obj to exchange, rk routes to queue
         rabbitTemplate.convertAndSend(exchange, routingJsonKey, student);
 
     }

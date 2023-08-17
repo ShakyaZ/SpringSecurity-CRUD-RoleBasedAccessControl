@@ -1,5 +1,5 @@
 package com.example.manytomany.controller;
-import com.example.manytomany.config.RabbitMQJsonProducer;
+import com.example.manytomany.producer.RabbitMQJsonProducer;
 import com.example.manytomany.entity.Student;
 import com.example.manytomany.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
